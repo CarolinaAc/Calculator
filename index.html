@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+	<html>
+	<head>
+		<title>Calculator </title>
+		<script src="script2.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+	</head>
+	<body> 
+	<div class="grid-container">
+	<div class="item-screen">
+		<div id="display2">Welcome :)</div>
+		<div id="display"> Please press C to start</div>
+	</div>
+	<div class="grid-item"  onclick="clearDisplay()"><button>C</button>
+	</div>
+	<div class="grid-item" onclick="deleteDisplay()"><button>DEL</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem('*')"><button>&times;</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem('/')"><button>/</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(7)"><button>7</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(8)"><button>8</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(9)"><button>9</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem('+')"><button>+</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(4)"><button>4</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(5)"><button>5</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(6)"><button>6</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem('-')"><button>-</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(1)"><button>1</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(2)"><button>2</button>
+	</div>
+	<div class="grid-item" onclick="concatenateElem(3)"><button>3</button>
+	</div>
+    <div class="item-equal grid-item" onclick="evaluateExpresion()"><button>=</button>
+    </div>
+	<div class="item0 grid-item" onclick="concatenateElem(0)"><button>0</button>
+	</div>
+	<div class="grid-item"  onclick="concatenateElem('.')"><button>.</button>
+	</div>
+</div>
+	</body>
+</br>
+</br>
+	<footer>This is my first fully functional calculator made from scratch with html, css and javascript.</footer>
+	</html>

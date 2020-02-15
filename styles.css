@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+.grid-container{
+	display: grid;
+  grid-template-rows: 30% 14% 14% 14% 14% 14%;
+  grid-template-columns: 25% 25% 25% 25%;
+  border-radius: 5%;
+  margin:auto;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgb(69, 69, 75);
+	justify-content: center; 
+}
+
+.grid-item{
+  border-style: solid;
+  border-width: medium;
+}
+
+.item-screen{
+  grid-column: 1 / span 4;
+  padding: 5%;
+  background-color: green;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  
+}
+#display2{
+  font-size: 100%;
+  text-align: right;
+  direction: left;
+}
+#display{
+  font-size: 200%;
+  padding: 5%;
+  text-align: right;
+  direction: left;
+
+}
+
+.item-equal{
+  grid-column-start: 4;
+  grid-row: 5 / span 6;
+}
+
+.item0{
+  grid-column: 1 / span 2;
+  
+}
+button{
+  width: 100%;
+  height: 100%;
+  background-color: cyan;
+  color: black;
+}
+
+button:hover{
+  background-color: blue;
+  color: white;
+}
+
+/* responsive for mobile devices, widths calculated on http://gridcalculator.dk */
+@media (max-width: 600px) {
+  .grid-container{
+    width: 400px;
+    height: 300px;
+  }
+  }
+footer{
+  display: block;
+  background-color: slategrey;
+  text-align: right;
+  color: white;
+  padding: 5px;
+  font-weight: lighter;
+}
