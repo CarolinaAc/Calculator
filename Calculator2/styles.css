@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+/*screen*/
+ 
+.calculator-screen{
+  margin: auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 2%;
+  background-color: rgb(69, 69, 75);
+  font-family: "Orbitron";
+}
+
+#display2{
+  font-size: 100%;
+  text-align: right;
+  direction: left;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgb(22, 75, 29);
+  color: rgb(243, 159, 3);
+}
+
+#display{
+  font-size: 150%;
+  padding: 5%;
+  text-align: right;
+  direction: left;
+  background-color: rgb(22, 75, 29);
+  color: rgb(243, 159, 3);
+}
+
+
+
+/*keys*/
+.calculator-keys{
+	display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10px;
+  border-radius: 5%;
+  margin:auto;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgb(69, 69, 75);
+}
+
+.zero{
+  grid-area: 5 / 1 / 5 / 3;
+  
+}
+
+
+
+/* responsive for mobile devices, widths calculated on http://gridcalculator.dk */
+@media (max-width: 600px) {
+  .grid-container{
+    width: 400px;
+    height: 300px;
+  }
+  }
+footer{
+  display: block;
+  background-color: slategrey;
+  text-align: right;
+  color: white;
+  padding: 5px;
+  font-weight: lighter;
+}
