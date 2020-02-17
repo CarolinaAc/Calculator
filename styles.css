@@ -13,12 +13,14 @@
   grid-template-columns: 25% 25% 25% 25%;
   border-radius: 5%;
   margin:auto;
-  width: 500px;
+  width: 400px;
   height: 400px;
   padding: 20px;
   background-color: rgb(69, 69, 75);
-	justify-content: center; 
-}
+  justify-content: center; 
+  }
+
+
 
 .grid-item{
   border-style: solid;
@@ -31,19 +33,21 @@
   background-color: green;
   font-family: 'Orbitron', sans-serif;
   color: white;
-  
+  direction: left;
+  overflow: hidden;
+  white-space: nowrap;
 }
 #display2{
+  float: right;
   font-size: 100%;
   text-align: right;
-  direction: left;
+  
 }
 #display{
-  font-size: 200%;
-  padding: 5%;
+  float: right;
+  font-size: 150%;
+  margin-top: 10%;
   text-align: right;
-  direction: left;
-
 }
 
 .item-equal{
@@ -67,13 +71,7 @@ button:hover{
   color: white;
 }
 
-/* responsive for mobile devices, widths calculated on http://gridcalculator.dk */
-@media (max-width: 600px) {
-  .grid-container{
-    width: 400px;
-    height: 300px;
-  }
-  }
+
 footer{
   display: block;
   background-color: slategrey;
@@ -82,3 +80,20 @@ footer{
   padding: 5px;
   font-weight: lighter;
 }
+
+  
+
+  
+/*
+    Will add media queries if required for mobile devices
+    but at present all tests are running fine for different screen sizes
+@media only screen and (max-width: 425px) { 
+  .grid-container{
+  width: 100%;
+  height: auto;
+  }
+  #display{
+    font-size: 150% !important;
+    margin-bottom: 10%;
+  }
+}*/

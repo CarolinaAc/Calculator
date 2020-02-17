@@ -32,8 +32,7 @@ const concatenateElem = (value) =>{
         } else if (typeof(value) === 'number' || (value === '-')){
             changeLower(value);
         } //when the numbers fit in the screens
-    } else if (display.innerHTML.length < 20 && display2.innerHTML.length < 20){
-        if(display2.innerHTML.includes('=')){//if equal sign has been pressed
+    } else if(display2.innerHTML.includes('=')){//if equal sign has been pressed
             if (typeof(value) === 'number'){
                 clearDisplay();
                 changeLower(value);
@@ -45,6 +44,7 @@ const concatenateElem = (value) =>{
                 deleteDisplay();
             }
         } else {//if equal sign hasn't been pressed
+            if(display2.innerHTML !== 'Welcome :)'){
             if (typeof(value) === 'number' || (value === '.' && !/\./.test(display.innerHTML))){
                 displayLower(value);
             } else if (typeof(value) !== 'number' && value !== '.'){
@@ -57,8 +57,9 @@ const concatenateElem = (value) =>{
                 deleteDisplay();
             }
         }
+        }
     }
-}
+
 
   //function to evaluate the top screen 
 const evaluateExpresion = () => {
