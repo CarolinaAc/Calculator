@@ -1,8 +1,5 @@
-# Calculator
-* This is the first functional calculator I have built with HTML, CSS and JavaScript on [Codepen.io](https://codepen.io/csbks/full/OJVPxrK). 
-* Next versions will include:
-    - Link to codepen to be replaced by github. 
-    - Front end libraries such as jQuery, Bootstrap and Sass.
+# Calculator version 2
 
-
-    
+ * Built Calculator using HTML, CSS and Bootstrap
+ * Media queries for it to be mobile responsive - in process
+ * jQuery for it to do calculations and turn ON and OFF

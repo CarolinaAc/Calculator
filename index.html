@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 
-	<html>
+<!--for this version we will be using bootstrap, jquery and possibly sass-->	
+<html>
 	<head>
-		<title>Calculator </title>
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		 <!-- Required meta tags -->
+		 <meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 
+		 <!-- Bootstrap CSS -->
+		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- other needed links for bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<!--  My styles-->		 
 		<link rel="stylesheet" type="text/css" href="styles.css">
-		
+		<title>Calculator 2</title>
 	</head>
 	<body> 
-		<div class="container">
-		<p>Note: if the result of the operation does not fit the screen, you will get an exponential</p>
-	<div class="grid-container">
-	<div class="item-screen">
-		<div id="display2">Welcome :)</div>
-		<div id="display"> Please press C to start</div>
+
+<div class="calculator card">
+	<div class="calculator-screen">
+		<input type="text" class="w-100 p-3" id="display2" value="Welcome :)" disabled />
+		<input type="text" class="w-100 p-3" id="display" value="Please press ON to start" disabled /> 
 	</div>
-	<div class="grid-item"  onclick="clearDisplay()"><button>C</button>
-	</div>
-	<div class="grid-item" onclick="deleteDisplay()"><button>DEL</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem('*')"><button>&times;</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem('/')"><button>/</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(7)"><button>7</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(8)"><button>8</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(9)"><button>9</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem('+')"><button>+</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(4)"><button>4</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(5)"><button>5</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(6)"><button>6</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem('-')"><button>-</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(1)"><button>1</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(2)"><button>2</button>
-	</div>
-	<div class="grid-item" onclick="concatenateElem(3)"><button>3</button>
-	</div>
-    <div class="item-equal grid-item" onclick="evaluateExpresion()"><button>=</button>
-    </div>
-	<div class="item0 grid-item" onclick="concatenateElem(0)"><button>0</button>
-	</div>
-	<div class="grid-item"  onclick="concatenateElem('.')"><button>.</button>
+	<div class="calculator-keys">
+		<button type="button" class="on-key btn btn-danger" value="on" id="onbtn">ON</button>
+		<button type="button" class="clear btn btn-danger" value="clear">C</button>
+		<button  type="button" class="clear btn btn-danger" value="delete">DEL</button>
+		<button type="button" class="operator btn btn-info" value="*">&times;</button>
+		
+		
+		<button type="button" class="btn btn-light waves-effect" value="7">7</button>
+		<button type="button" class="btn btn-light waves-effect" value="8">8</button>
+		<button type="button" class="btn btn-light waves-effect" value="9">9</button>
+		<button type="button" class="operator btn btn-info" value="/">&divide;</button>
+		
+		
+		<button type="button" class="btn btn-light waves-effect" value="4">4</button>
+		<button type="button" class="btn btn-light waves-effect" value="5">5</button>
+		<button type="button" class="btn btn-light waves-effect" value="6">6</button>
+		<button type="button" class="operator btn btn-info" value="+">+</button>
+			
+		<button type="button" class="btn btn-light waves-effect" value="1">1</button>
+		<button type="button" class="btn btn-light waves-effect" value="2">2</button>
+		<button type="button" class="btn btn-light waves-effect" value="3">3</button>
+		<button type="button" class="operator btn btn-info" value="-">-</button>
+		
+		<button type="button" class="zero btn btn-light waves-effect" value="0">0</button>
+		<button type="button" class="decimal function btn btn-secondary" value=".">.</button>
+		<button type="button" class="equal-sign operator btn btn-info" value="=">=</button>
+
 	</div>
 </div>
-</div>
-<script src="script2.js"></script>
+	<!--  my script-->
+		<script src="script.js"></script>
 	</body>
 </br>
 </br>

@@ -7,71 +7,65 @@
   font-weight: bold;
 }
 
-.grid-container{
-	display: grid;
-  grid-template-rows: 30% 14% 14% 14% 14% 14%;
-  grid-template-columns: 25% 25% 25% 25%;
-  border-radius: 5%;
-  margin:auto;
-  width: 400px;
-  height: 400px;
+/*screen*/
+ 
+.calculator-screen{
+  margin: auto;
+  width: 500px;
   padding: 20px;
+  border-radius: 2%;
   background-color: rgb(69, 69, 75);
-  justify-content: center; 
-  }
-
-
-
-.grid-item{
-  border-style: solid;
-  border-width: medium;
+  font-family: "Orbitron";
 }
 
-.item-screen{
-  grid-column: 1 / span 4;
-  padding: 5%;
-  background-color: green;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
+#display2{
+  font-size: 100%;
+  text-align: right;
   direction: left;
   overflow: hidden;
   white-space: nowrap;
+  background-color: rgb(22, 75, 29);
+  color: rgb(243, 159, 3);
 }
-#display2{
-  float: right;
-  font-size: 100%;
-  text-align: right;
-  
-}
+
 #display{
-  float: right;
   font-size: 150%;
-  margin-top: 10%;
+  padding: 5%;
   text-align: right;
+  direction: left;
+  background-color: rgb(22, 75, 29);
+  color: rgb(243, 159, 3);
 }
 
-.item-equal{
-  grid-column-start: 4;
-  grid-row: 5 / span 6;
+
+
+/*keys*/
+.calculator-keys{
+	display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10px;
+  border-radius: 5%;
+  margin:auto;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgb(69, 69, 75);
 }
 
-.item0{
-  grid-column: 1 / span 2;
+.zero{
+  grid-area: 5 / 1 / 5 / 3;
   
 }
-button{
-  width: 100%;
-  height: 100%;
-  background-color: cyan;
-  color: black;
-}
-
-button:hover{
-  background-color: blue;
-  color: white;
-}
 
 
+
+/* responsive for mobile devices, widths calculated on http://gridcalculator.dk */
+@media (max-width: 600px) {
+  .grid-container{
+    width: 400px;
+    height: 300px;
+  }
+  }
 footer{
   display: block;
   background-color: slategrey;
@@ -80,20 +74,3 @@ footer{
   padding: 5px;
   font-weight: lighter;
 }
-
-  
-
-  
-/*
-    Will add media queries if required for mobile devices
-    but at present all tests are running fine for different screen sizes
-@media only screen and (max-width: 425px) { 
-  .grid-container{
-  width: 100%;
-  height: auto;
-  }
-  #display{
-    font-size: 150% !important;
-    margin-bottom: 10%;
-  }
-}*/
