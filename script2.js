@@ -2,10 +2,25 @@
 let display = document.getElementById("display");
 let display2 = document.getElementById("display2");
 
-//function to clear whole screen
+//function to turn on and off the calculator
+const onOff = () => {
+    if(display2.innerHTML !== 'Welcome :)'){
+        display2.innerHTML = 'Welcome :)'
+        display.innerHTML = 'Please press ON to start';
+        document.getElementById('onbtn').value = 'ON'
+    } else {
+        display.innerHTML = '0';
+        display2.innerHTML = '0';
+        document.getElementById('onbtn').value = 'OFF'
+    }
+}; 
+
+//function to clear the whole screen
 const clearDisplay = () => {
-display.innerHTML = '0';
-display2.innerHTML = '0';
+    if(display2.innerHTML !== 'Welcome :)') {
+        display.innerHTML = '0';
+        display2.innerHTML = '0';
+    }
 }; 
 
 //function to clear bottom screen
@@ -81,3 +96,14 @@ if (!display2.innerHTML.includes('=') && nums.test(display.innerHTML)){
 }
 }
 
+/* code for keyboard */
+/*
+document.onkeyup = function(event) {
+    let keyPress = String.fromCharCode(event.which)
+    let keycode = event.which
+    if (/\d/.test(keyPress)){}
+
+    
+}
+
+*/
